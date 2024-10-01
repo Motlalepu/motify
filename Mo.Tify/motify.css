@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+header,footer{
+    height: 70px ;
+    border: 1px solid black;
+    clear : both;
+} 
+
+section {
+    width: 50%;
+    height: 900px;
+    border: 2px solid black;
+    float: left;
+}
+
+
+iframe {
+    width: 80%;
+    height: 500px;
+    margin: 100px;
+}
+
+img{
+    width: 40px ;
+    height: 40px ;
+    margin: 40px;
+}
+
+button{
+    position: relative;
+    bottom: 100px; 
+    left: 100px; 
+}
+
+select{
+    position: relative;
+    bottom: 210px;
+    left: 100px; 
+}
+
+h2 { 
+    text-align: center;
+}
+
+nav{
+    flex: 1;
+    text-align: left;
+}
+
+ul{ 
+   list-style-type:none ;/*this removing bullets*/
+   margin: 0; /*these remove broswer default settings*/
+   padding: 0;
+}
+
+li{
+    display: inline ; /*Here, we remove the line breaks before and after each list item, to display them on one line*/
+    float: left;
+    padding: 30px;
+}
+
+form{
+    text-align: center; 
+    padding: 50px;
+}
+
+#proPic{
+    width: 80px ;
+    height: 70px ;
+    align-items: center;
+    position: relative;
+     
+}
+
+.bi-arrow-left-circle{
+    width: 80px;
+    height: 30px;
+    bottom:80px;
+    position: relative;
+    top: 50px; 
+}
+
+#quote{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    display: inline ;
+}
+
+ 
+#sec2{
+    width: 100%;
+    height: 900px;
+     
+}
+
+#btnSearch{
+    text-align: center; 
+    padding: 50px;
+}
+
+ 

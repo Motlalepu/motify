@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width", initial-scale="0.1"/>
+    <meta charset="utf-8"> 
+</head>
+
+<body>
+
+<!--Logo img-->
+<div class="header">
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="c:\create  mp3 player using pyhton\create  mp3 player using pyhton\logo.jpeg"  >
+        </div>
+
+<nav>
+    <ul>
+        <li><a class="" href="">Home</a></li>
+        <li><a class="" href="">My Story</a></li>
+        <li><a class="" href="">About</a></li>
+        <li><a class="" href="">Reviews</a></li>
+
+        <form>
+            <input type="text">
+        </form>
+    </ul>
+</nav>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <h1> Hi!👋 Welcome to the world of music.<br> Let me let you in 🏕️</h1>
+        <span>come as you are</span>
+    </div>
+<div class="col-2">
+    <img src="c:\Users\nomvu\Downloads\Designer (11).jpeg"  >
+</div>    
+</div>
+</div>
+
+<!--The music. In this part I should embed the Spotify playlist with new added music and get a vid that will allow vid playing -->
+<div class="iframe-container"> 
+<iframe src="https://open.spotify.com/embed/playlist/2Iwk8ulc6Xo9MaT7McYp0e?utm_source=generator" 
+ 
+frameBorder="0" 
+allow=""  
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+loading="lazy"></iframe>
+ 
+ 
+
+<!--container for videos-->
+<!--add title--> 
+<iframe src="https://www.youtube.com/embed/5QFHLf9RHlw?si=5lI51wK1CWsiit3_loop=1" 
+  
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" 
+allowfullscreen>
+ 
+</iframe>
+
+<div class="nav-buttons">
+    <a href="#" class="previous">Previous</a>
+    <a href="#" class="next">Next</a>
+</div>
+</div>
+
+<script>
+    //js code to manipulate elements by class name
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const previousButtons = document.getElementsByClassName('previous');
+      const nextButtons = document.getElementsByClassName('next');
+  
+      const videoUrls = [
+  
+      ];
+      let currentVideoIndex = 0;
+  
+      const videoFrame = document.getElementById('videoFrame');
+  
+      function laodVideo(index) {
+          if (index >= 0 && index < videoUrls.lenght) {
+              videoFrame.src = videoUrls [index];
+              currentVideoIndex = index;
+          }
+      }
+  
+      //access the 1st prev buttton
+      if (previousButtons.lenght > 0) {
+          const previousButton = previousButtons[0];
+          previousButton.addEventListner('click',(e) => {
+              e.preventDefault();
+              if(currentVideoIndex > 0) {
+                  laodVideo(currentVideoIndex - 1);
+              }
+          });
+       }
+  
+      //access the 1st next button
+      if (nextButtons.lenght > 0) {
+          const nextButton = nextButtons[0];
+          nextButton.addEventListener('click',(e)=> {
+              e.preventDefault();
+              if(currentVideoIndex < videoUrls.length - 1) {
+                  laodVideo(currentVideoIndex + 1);
+              }        
+          });
+      } 
+    });
+  
+  </script>
+
+
+
+</body>
+</html>
